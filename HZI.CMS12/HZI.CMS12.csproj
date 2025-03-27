@@ -21,6 +21,11 @@
   </ItemGroup>
   
   <ItemGroup>
+    <Compile Remove="Controllers\Blocks\SectionMediaBlockController.cs" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Controllers\Blocks\" />
     <Folder Include="wwwroot\images\" />
     <Folder Include="wwwroot\js\" />
   </ItemGroup>

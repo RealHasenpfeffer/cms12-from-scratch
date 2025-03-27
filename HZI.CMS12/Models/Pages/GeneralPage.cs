@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace HZI.CMS12.Models.Pages
+﻿namespace HZI.CMS12.Models.Pages
 {
     [ContentType(
         DisplayName = "General Page", 

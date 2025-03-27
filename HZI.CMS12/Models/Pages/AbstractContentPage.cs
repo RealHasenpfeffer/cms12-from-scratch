@@ -39,7 +39,7 @@ namespace HZI.CMS12.Models.Pages
            Name = "Bottom Content Area",
            GroupName = SystemTabNames.Content,
            Order = 40)]
-        [AllowedTypes(AllowedTypes = new[] { typeof(SectionMediaBlock) })]
+        [AllowedTypes(AllowedTypes = [typeof(SectionMediaBlock), typeof(LinkGridBlock)])]
         public virtual ContentArea? BottomContentArea { get; set; }
     }
 }

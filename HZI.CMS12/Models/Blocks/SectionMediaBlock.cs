@@ -17,16 +17,31 @@ namespace HZI.CMS12.Models.Blocks
         public virtual string? Headline { get; set; }
 
         [Display(
-            Name = "Body",
+            Name = "Sub Headline",
             GroupName = SystemTabNames.Content,
             Order = 20
+            )]
+        public virtual string? SubHeadline { get; set; }
+
+        [Display(
+            Name = "Body",
+            GroupName = SystemTabNames.Content,
+            Order = 30
             )]
         public virtual XhtmlString? Body { get; set; }
 
         [Display(
+            Name = "Image on Left or Right",
+            GroupName = SystemTabNames.Content,
+            Order = 40
+            )]
+        [AllowedValues(["Left", "Right"], ErrorMessage = "Invalid")]
+        public virtual string? ImagePosition { get; set; }
+
+        [Display(
             Name = "Image",
             GroupName = SystemTabNames.Content,
-            Order = 10
+            Order = 50
             )]
         [UIHint(UIHint.Image)]
         public virtual ContentReference? Image { get; set; }

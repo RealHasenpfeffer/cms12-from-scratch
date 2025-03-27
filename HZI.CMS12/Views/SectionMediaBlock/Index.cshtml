@@ -1,18 +1,20 @@
 ﻿@model SectionMediaBlock
+@{
+    var imageClass = Model.ImagePosition == "Right" ? "col-lg-6 position-lg-absolute fluid-right-half h-100" : /* "Left" */ "col-lg-6 position-lg-absolute fluid-left-half h-100";
+    var textClass = Model.ImagePosition == "Right" ? "col-lg-6 py-5 pe-lg-5" : /* "Left" */ "col-lg-6 offset-lg-6 py-5 ps-lg-5";
+}
 
 <!-- Two column: Fluid image left, contained text right -->
 <div class="container-fluid position-relative half-fluid">
     <div class="container">
         <div class="row">
-            <!-- Image -->
-            <div class="col-lg-6 position-lg-absolute fluid-left-half h-100">
-                <div class="fluid-image" style="background-image:url('@Url.ContentUrl(Model.Image)')"></div>
+            <div class="@imageClass">
+                <div class="fluid-image" style="background-image:url('@Url.ContentUrl(Model.Image)')" title="@Model.Image"></div>
             </div>
 
-            <!-- Text -->
-            <div class="col-lg-6 offset-lg-6 py-5 ps-lg-5">
+            <div class="@textClass">
                 <h1>@Html.PropertyFor(x => x.Headline)</h1>
-                <h5 class="text-muted pb-3"><i>Example</i></h5>
+                <h5 class="text-muted pb-3"><i>@Html.PropertyFor(x => x.SubHeadline)</i></h5>
                 @Html.PropertyFor(x => x.Body)
             </div>
         </div>

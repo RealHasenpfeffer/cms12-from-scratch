@@ -1,3 +1,15 @@
 ﻿@model GeneralPage
 
-@Model.Name
+<div class="content">
+    @Html.PropertyFor(x => x.Body)
+</div>
+
+<div class="bottom">
+    @Html.PropertyFor(x => x.BottomContentArea)
+@*     <h1>Sign up for our newsletter</h1>
+    <form>
+        <input class="name" placeholder="Name" type="text" name="firstname" />
+        <br /><br /><input class="name" placeholder="Email" type="text" name="firstname" /><br /><br />
+        <input class="submit" type="submit" label="submit" />
+    </form> *@
+</div>

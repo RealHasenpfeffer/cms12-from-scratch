@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using HZI.CMS12.Models.Blocks;
+using System.ComponentModel.DataAnnotations;
 
 namespace HZI.CMS12.Models.Pages
 {
@@ -33,5 +34,12 @@ namespace HZI.CMS12.Models.Pages
            GroupName = SystemTabNames.Content,
            Order = 30)]
         public virtual XhtmlString? Body { get; set; }
+
+        [Display(
+           Name = "Bottom Content Area",
+           GroupName = SystemTabNames.Content,
+           Order = 40)]
+        [AllowedTypes(AllowedTypes = new[] { typeof(SectionMediaBlock) })]
+        public virtual ContentArea? BottomContentArea { get; set; }
     }
 }

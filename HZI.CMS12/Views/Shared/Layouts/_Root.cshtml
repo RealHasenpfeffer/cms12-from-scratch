@@ -1,11 +1,14 @@
 ﻿<!doctype html>
 <html lang="en">
-    <partial name="~/Views/Shared/_HeaderIncludes.cshtml" />
-    <body>
-        <partial name="~/Views/Shared/_Header.cshtml" />
-        <main>
+<partial name="~/Views/Shared/_HeaderIncludes.cshtml" />
+<body>
+    <partial name="~/Views/Shared/_BodyIncludes.cshtml" />
+    <main>
+        <div class="container">
+            <partial name="~/Views/Shared/_Header.cshtml" />
             @RenderBody()
-        </main>
-        <partial name="~/Views/Shared/_Footer.cshtml" />
-    </body>
+            <partial name="~/Views/Shared/_Footer.cshtml" />
+        </div>
+    </main>
+</body>
 </html>

@@ -1,0 +1,46 @@
+/* Grid adjustments for half fluid image, half text layouts */
+
+/* Add .fluid-left-half or .fluid-right-half class to the image column depending on which side it goes on */
+/* On mobile, images stack, break out of the container, and go full width */
+.fluid-left-half,
+.fluid-right-half {
+    left: 50%;
+    margin-left: -50vw;
+    max-width: 100vw;
+    position: relative;
+    right: 50%;
+    width: 100vw;
+    padding: 0px;
+}
+
+/* Background image */
+.fluid-image {
+    background-image: url("https://loremflickr.com/1000/2000/dog");
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    height: 100%;
+}
+
+/* When compiling with BS Sass files, use: @include media-breakpoint-up(lg) */
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+    .fluid-left-half {
+        padding-left: 0 !important;
+        position: absolute;
+        left: 0;
+        right: 50%;
+        margin-left: auto;
+        width: auto;
+    }
+
+    .fluid-right-half {
+        padding-right: 0 !important;
+        position: absolute;
+        right: 0;
+        left: 50%;
+        margin-left: auto;
+        width: auto;
+    }
+}

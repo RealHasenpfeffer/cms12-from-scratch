@@ -1,14 +1,12 @@
 ﻿@model SectionMediaBlock
 
-
 <!-- Two column: Fluid image left, contained text right -->
 <div class="container-fluid position-relative half-fluid">
     <div class="container">
         <div class="row">
-
             <!-- Image -->
-            <div class="col-lg-6 position-lg-absolute left-half h-100">
-                <div class="image" style="background-image:url('@Url.ContentUrl(Model.Image)')"></div>
+            <div class="col-lg-6 position-lg-absolute fluid-left-half h-100">
+                <div class="fluid-image" style="background-image:url('@Url.ContentUrl(Model.Image)')"></div>
             </div>
 
             <!-- Text -->

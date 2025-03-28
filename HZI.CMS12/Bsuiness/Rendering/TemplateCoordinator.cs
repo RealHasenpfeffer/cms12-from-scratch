@@ -1,6 +1,7 @@
 ﻿using EPiServer.ServiceLocation;
 using EPiServer.Web.Mvc;
 using HZI.CMS12.Models.Blocks;
+using HZI.CMS12.Models.Pages;
 
 namespace HZI.CMS12.Bsuiness.Rendering
 {
@@ -23,6 +24,16 @@ namespace HZI.CMS12.Bsuiness.Rendering
                 AvailableWithoutTag = true,
                 TemplateTypeCategory = EPiServer.Framework.Web.TemplateTypeCategories.MvcPartialView,
                 Path = "~/Views/LinkGridBlock/Index.cshtml"
+            });
+
+            viewTemplateModelRegistrator.Add(typeof(AbstractContentPage), new EPiServer.DataAbstraction.TemplateModel
+            {
+                Name = "AbstractContentPage-LinkGrid",
+                AvailableWithoutTag = false,
+                Tags = ["LinkGrid"],
+                Inherit = true,
+                TemplateTypeCategory = EPiServer.Framework.Web.TemplateTypeCategories.MvcPartialView,
+                Path = "~/Views/AbstractContentPage/LinkGrid.cshtml"
             });
         }
     }

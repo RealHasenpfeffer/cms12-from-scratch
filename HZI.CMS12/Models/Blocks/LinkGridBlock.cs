@@ -15,6 +15,6 @@ namespace HZI.CMS12.Models.Blocks
             Order = 10
             )]
         [AllowedTypes(AllowedTypes = [typeof(AbstractContentPage)])]
-        public virtual ContentReference? Image { get; set; }
+        public virtual ContentArea? Links { get; set; }
     }
 }

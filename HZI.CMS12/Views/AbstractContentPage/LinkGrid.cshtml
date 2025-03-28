@@ -2,7 +2,6 @@
 
 <div class="col">
     <div class="card shadow-sm">
-        @* <h4>@Html.PropertyFor(x => x.PageTitle)</h4> *@
         <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: @Model.PageTitle" preserveAspectRatio="xMidYMid slice" focusable="false">
             <title>Placeholder</title>
             <rect width="100%" height="100%" fill="#55595c" />
@@ -13,7 +12,7 @@
             <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                     <a type="button" class="btn btn-sm btn-outline-secondary" href="@Url.ContentUrl(Model.ContentLink)">View</a>
-                    @* <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> *@
+                    @* <a type="button" class="btn btn-sm btn-outline-secondary">Edit</a> *@
                 </div>
                 <small class="text-muted">@Html.PropertyFor(x => x.Category)</small>
             </div>

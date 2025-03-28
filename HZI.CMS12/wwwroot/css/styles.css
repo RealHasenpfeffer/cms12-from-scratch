@@ -29,14 +29,23 @@
 
 /* Background image */
 .fluid-image {
-    background-image: url("https://loremflickr.com/1000/2000/dog");
     background-size: cover;
     background-position: center;
-    min-height: 400px;
     height: 100%;
 }
 
-/* When compiling with BS Sass files, use: @include media-breakpoint-up(lg) */
+@media (max-width: 575px) {
+    .fluid-image {
+        min-height: 300px;
+    }
+}
+
+@media (min-width: 576px) {
+    .fluid-image {
+        min-height: 400px;
+    }
+}
+
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
 

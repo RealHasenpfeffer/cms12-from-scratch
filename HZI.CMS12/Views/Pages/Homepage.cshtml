@@ -1,0 +1,14 @@
+﻿@model HomepageViewModel
+
+<div class="content">
+    @Html.PropertyFor(x => x.Page.Body)
+
+    @foreach (var page in Model.RelatedContent)
+    {
+        <div>
+            @{
+                Html.RenderContentData(page, false, "ArticlePartial");
+            }
+        </div>
+    }
+</div>

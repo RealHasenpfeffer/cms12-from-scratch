@@ -14,6 +14,6 @@ namespace HZI.CMS12.Models.Media
         [Display(
             Name = "Alternate Text"
             )]
-        public virtual string AltText { get; set; }
+        public virtual string? AltText { get; set; }
     }
 }

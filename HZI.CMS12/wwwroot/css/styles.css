@@ -20,7 +20,7 @@
 .fluid-right-half {
     left: 50%;
     margin-left: -50vw;
-    max-width: 100vw;
+    max-width: 100vw; 
     position: relative;
     right: 50%;
     width: 100vw;

@@ -1,0 +1,9 @@
+﻿@model PageViewModel<GeneralPage>
+
+<div class="content">
+    @Html.PropertyFor(x => x.Page.Body)
+</div>
+
+<div class="bottom mt-auto py-5 bg-light">
+    @Html.PropertyFor(x => x.Page.BottomContentArea)
+</div>

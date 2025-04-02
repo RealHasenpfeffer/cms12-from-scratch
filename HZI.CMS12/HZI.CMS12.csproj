@@ -14,6 +14,8 @@
   
   <ItemGroup>
     <PackageReference Include="EPiServer.CMS" Version="12.29.0" />
+    <PackageReference Include="EPiServer.Find" Version="16.4.1" />
+    <PackageReference Include="EPiServer.Find.Cms" Version="16.4.1" />
   </ItemGroup>
   
   <ItemGroup>

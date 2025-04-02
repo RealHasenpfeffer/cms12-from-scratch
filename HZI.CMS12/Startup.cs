@@ -26,7 +26,13 @@ public class Startup
 
         services
             .AddCmsAspNetIdentity<ApplicationUser>()
+            .Configure<EPiServer.Find.FindOptions>(options =>
+            {
+                options.DefaultIndex = "nhase_hzi";
+                options.ServiceUrl = "https://service-demo.find.episerver.net/dNULSLNR1kX0TDDVBN3mXh498R47SKzw/";
+            })
             .AddCms()
+            .AddFind()
             .AddAdminUserRegistration()
             .AddEmbeddedLocalization<Startup>();
     }
